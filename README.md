@@ -98,9 +98,9 @@ git --version
 
 &nbsp;&nbsp;&nbsp;&nbsp;**3)** **Settings** 메뉴 클릭
 
-&nbsp;&nbsp;&nbsp;&nbsp;**4)** **Autofetch** 검색
+&nbsp;&nbsp;&nbsp;&nbsp;**4)** **Autofetch** 검색 
 
-&nbsp;&nbsp;&nbsp;&nbsp;**5)** **Git: Autofetch**를 true로 변경
+&nbsp;&nbsp;&nbsp;&nbsp;**5)** **Git: Autofetch**를 true로 변경 (Autofetch : Git 원격 저장소(Origin)의 변경 사항을 자동으로 가져오는 기능)
 
 &nbsp;&nbsp;&nbsp;&nbsp;**6)** **Git: Autofetch Period**를 원하는 값으로 변경
 
