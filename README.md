@@ -1,38 +1,50 @@
 # hello-git
 
+## 📑 목차
+
+1. [Git 및 VS Code 설정](#1-git-및-vs-code-설정)
+   - [Git 설치](#1-1-git-설치)
+   - [Repository 생성](#1-2-repository-생성)
+   - [VS Code 설치](#1-3-vs-code-설치)
+   - [VS Code Git 설정](#1-4-vs-code-git-설정)
+   - [Git Repository Clone](#1-5-git-repository-clone)
+   - [VS Code에서 Git Commit / Push](#1-6-vs-code에서-git-commitpush)
+   - [VS Code에서 Git Pull](#1-7-vs-code에서-git-pull)
+
+2. [Docker 패키지 관리](#2-docker-패키지-관리)
+
 <br>
 
-## 1. Git 설치
+# 1. Git 및 VS Code 설정
 
-<br>
+## 1-1. Git 설치
 
 ### (1) Git 다운로드
 
-&nbsp;&nbsp;&nbsp;&nbsp;**1)** [https://git-scm.com](https://git-scm.com) 접속
+1. [https://git-scm.com](https://git-scm.com) 접속
 
-&nbsp;&nbsp;&nbsp;&nbsp;**2)** **Install** 버튼 클릭
+2. **Install** 버튼 클릭
 
-&nbsp;&nbsp;&nbsp;&nbsp;![Git Install 버튼](./이미지/GitInstall.png)
+   ![Git Install 버튼](./이미지/GitInstall.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;**3)** 운영체제에 맞는 설치 파일 다운로드
-   
-&nbsp;&nbsp;&nbsp;&nbsp;![Git 운영체제 선택](./이미지//GitVersion.png)
+3. 운영체제에 맞는 설치 파일 다운로드
+
+   ![Git 운영체제 선택](./이미지//GitVersion.png)
 
 <br>
 
 ### (2) 설치 확인
 
-&nbsp;&nbsp;&nbsp;&nbsp;**1)** 설치 완료 후 **명령 프롬프트(cmd)** 또는 **터미널** 실행
+1. 설치 완료 후 **명령 프롬프트(cmd)** 또는 **터미널** 실행
 
-&nbsp;&nbsp;&nbsp;&nbsp;**2)** 아래 명령어를 입력하여 설치 확인
-
+2. 아래 명령어를 입력하여 설치 확인
 ```bash
 git --version
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;**3)** Git 버전이 표시되면 설치 완료! ✅
+3. Git 버전이 표시되면 설치 완료! ✅
 
-&nbsp;&nbsp;&nbsp;&nbsp;![Git 버전 확인](./이미지/GitConfirm.png)
+   ![Git 버전 확인](./이미지/GitConfirm.png)
 
 <br>
 
@@ -40,45 +52,24 @@ git --version
 
 <br>
 
-## 2. Repository 생성
-
-<br>
+## 1-2. Repository 생성
 
 ### (1) GitHub 접속 및 Repository 생성
 
-&nbsp;&nbsp;&nbsp;&nbsp;**1)** [https://github.com/ubisam-research](https://github.com/ubisam-research) 접속
+1. [https://github.com/ubisam-research](https://github.com/ubisam-research) 접속
 
-&nbsp;&nbsp;&nbsp;&nbsp;**2)** **Repositories** 오른쪽의 **New** 버튼 클릭
+2. **Repositories** 오른쪽의 **New** 버튼 클릭
 
-&nbsp;&nbsp;&nbsp;&nbsp;![Repositories New 버튼](./이미지/ReNew.png)
+   ![Repositories New 버튼](./이미지/ReNew.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;**3)** Repository 생성
+3. Repository 생성
+   - **Repository name**: `com.ubisam.대분류.소분류`
+   - **Visibility**: Private
+   - **Add README**: 체크 ✅
+   - **Add .gitignore**: Java
+   - **License**: Apache License 2.0
 
-&nbsp;&nbsp;&nbsp;&nbsp;- **Repository name**: `com.ubisam.대분류.소분류`  
-&nbsp;&nbsp;&nbsp;&nbsp;- **Visibility**: Private  
-&nbsp;&nbsp;&nbsp;&nbsp;- **Add README**: 체크 ✅  
-&nbsp;&nbsp;&nbsp;&nbsp;- **Add .gitignore**: Java  
-&nbsp;&nbsp;&nbsp;&nbsp;- **License**: Apache License 2.0
-
-&nbsp;&nbsp;&nbsp;&nbsp;**4)** **Create repository** 클릭
-
-<br>
-
----
-
-<br>
-
-## 3. VS Code 설치
-
-<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;**1)** [https://code.visualstudio.com/](https://code.visualstudio.com/) 접속
-
-&nbsp;&nbsp;&nbsp;&nbsp;**2)** **Download for Windows** 버튼 클릭
-
-&nbsp;&nbsp;&nbsp;&nbsp;**3)** 설치 진행 시 다음 항목들을 체크
-
-&nbsp;&nbsp;&nbsp;&nbsp;![VS Code 설치 옵션](./이미지/VSCodeInstall.png)
+4. **Create repository** 클릭
 
 <br>
 
@@ -86,25 +77,15 @@ git --version
 
 <br>
 
-## 4. VS Code Git 설정
+## 1-3. VS Code 설치
 
-<br>
+1. [https://code.visualstudio.com/](https://code.visualstudio.com/) 접속
 
-&nbsp;&nbsp;&nbsp;&nbsp;**1)** **VS Code** 실행
+2. **Download for Windows** 버튼 클릭
 
-&nbsp;&nbsp;&nbsp;&nbsp;**2)** 좌측 하단의 톱니바퀴 아이콘 클릭
+3. 설치 진행 시 다음 항목들을 체크
 
-&nbsp;&nbsp;&nbsp;&nbsp;![VS Code 톱니바퀴](./이미지/VSCodeWheel.png)
-
-&nbsp;&nbsp;&nbsp;&nbsp;**3)** **Settings** 메뉴 클릭
-
-&nbsp;&nbsp;&nbsp;&nbsp;**4)** **Autofetch** 검색 
-
-&nbsp;&nbsp;&nbsp;&nbsp;**5)** **Git: Autofetch**를 true로 변경 (Autofetch : Git 원격 저장소(Origin)의 변경 사항을 자동으로 가져오는 기능)
-
-&nbsp;&nbsp;&nbsp;&nbsp;**6)** **Git: Autofetch Period**를 원하는 값으로 변경
-
-&nbsp;&nbsp;&nbsp;&nbsp;![VS Code Autofetch 설정](./이미지/VSCodeAutoFetch.png)
+   ![VS Code 설치 옵션](./이미지/VSCodeInstall.png)
 
 <br>
 
@@ -112,36 +93,55 @@ git --version
 
 <br>
 
-## 5. Git Repository Clone
+## 1-4. VS Code Git 설정
+
+1. **VS Code** 실행
+
+2. 좌측 하단의 톱니바퀴 아이콘 클릭
+
+   ![VS Code 톱니바퀴](./이미지/VSCodeWheel.png)
+
+3. **Settings** 메뉴 클릭
+
+4. **Autofetch** 검색
+
+5. **Git: Autofetch**를 true로 변경 (Autofetch : Git 원격 저장소(Origin)의 변경 사항을 자동으로 가져오는 기능)
+
+6. **Git: Autofetch Period**를 원하는 값으로 변경
+
+   ![VS Code Autofetch 설정](./이미지/VSCodeAutoFetch.png)
 
 <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;**1)** 복제할 Repository 페이지로 이동
+---
 
-&nbsp;&nbsp;&nbsp;&nbsp;**2)** **<> Code** 버튼 클릭
+<br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;![Code 버튼](./이미지/GitCodeBtn.png)
+## 1-5. Git Repository Clone
 
-&nbsp;&nbsp;&nbsp;&nbsp;**3)** **HTTPS** 탭의 주소 복사
+1. 복제할 Repository 페이지로 이동
 
-&nbsp;&nbsp;&nbsp;&nbsp;**4)** Windows 탐색기에서 **workspace** 폴더 생성
+2. **<> Code** 버튼 클릭
 
-&nbsp;&nbsp;&nbsp;&nbsp;**5)** 명령 프롬프트를 관리자 권한으로 실행
+   ![Code 버튼](./이미지/GitCodeBtn.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;**6)** workspace 폴더로 이동
+3. **HTTPS** 탭의 주소 복사
 
+4. Windows 탐색기에서 **workspace** 폴더 생성
+
+5. 명령 프롬프트를 관리자 권한으로 실행
+
+6. workspace 폴더로 이동
 ```bash
 cd workspace
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;**7)** Repository 복제 (본인의 GitHub 사용자명으로 변경)
-
+7. Repository 복제 (본인의 GitHub 사용자명으로 변경)
 ```bash
 git clone https://Parkjinwon1025@github.com/ubisam-research/com.ubisam.persons.jhkim.git
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;**8)** VS Code 실행
-
+8. VS Code 실행
 ```bash
 code .
 ```
@@ -152,35 +152,33 @@ code .
 
 <br>
 
-## 6. VS Code에서 Git Commit/Push
+## 1-6. VS Code에서 Git Commit/Push
 
-<br>
+1. 파일 내용이나 이름 변경
 
-&nbsp;&nbsp;&nbsp;&nbsp;**1)** 파일 내용이나 이름 변경
+2. VS Code 왼쪽 탭의 **Source Control** 메뉴 선택
 
-&nbsp;&nbsp;&nbsp;&nbsp;**2)** VS Code 왼쪽 탭의 **Source Control** 메뉴 선택
+   ![VS Code Source Control](./이미지/VSCodeSourceControl.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;![VS Code Source Control](./이미지/VSCodeSourceControl.png)
+3. Changes 섹션에서 업로드할 파일들의 **+ 버튼** 클릭
 
-&nbsp;&nbsp;&nbsp;&nbsp;**3)** Changes 섹션에서 업로드할 파일들의 **+ 버튼** 클릭
+   ![파일 스테이징](./이미지/VSCodePlus.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;![파일 스테이징](./이미지/VSCodePlus.png)
+4. Staged Changes에 파일이 정상적으로 추가되었는지 확인
 
-&nbsp;&nbsp;&nbsp;&nbsp;**4)** Staged Changes에 파일이 정상적으로 추가되었는지 확인
+   ![Staged Changes 확인](./이미지/VSCodeStagedChanges.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;![Staged Changes 확인](./이미지/VSCodeStagedChanges.png)
+5. Commit 메시지를 작성하고 **Commit** 버튼 클릭
 
-&nbsp;&nbsp;&nbsp;&nbsp;**5)** Commit 메시지를 작성하고 **Commit** 버튼 클릭
+   ![Commit 실행](./이미지/VSCodeCommit.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;![Commit 실행](./이미지/VSCodeCommit.png)
+6. **Sync Changes** 버튼 클릭
 
-&nbsp;&nbsp;&nbsp;&nbsp;**6)** **Sync Changes** 버튼 클릭
+   ![Sync Changes](./이미지/VSCodeStagedChanges2.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;![Sync Changes](./이미지/VSCodeStagedChanges2.png)
+7. 팝업창에서 **OK 버튼** 클릭
 
-&nbsp;&nbsp;&nbsp;&nbsp;**7)** 팝업창에서 **OK 버튼** 클릭
-
-&nbsp;&nbsp;&nbsp;&nbsp;![OK 버튼 클릭](./이미지/VSCodeOK.png)
+   ![OK 버튼 클릭](./이미지/VSCodeOK.png)
 
 <br>
 
@@ -188,14 +186,69 @@ code .
 
 <br>
 
-## 7. VS Code에서 Git Pull
+## 1-7. VS Code에서 Git Pull
 
+1. VS Code 왼쪽 탭의 **Source Control** 메뉴 선택
+
+2. **Sync Changes** 버튼 클릭
+
+   ![Sync Changes](./이미지/VSCodeStagedChanges2.png)
+
+3. Pull 결과 확인
+
+<hr style="border: 20px solid black;">
 <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;**1)** VS Code 왼쪽 탭의 **Source Control** 메뉴 선택
+# 2. Docker 패키지 관리
 
-&nbsp;&nbsp;&nbsp;&nbsp;**2)** **Sync Changes** 버튼 클릭
+1. Git Token(classic) 생성 [있으면 안해도 됨.]
 
-&nbsp;&nbsp;&nbsp;&nbsp;![Sync Changes](./이미지/VSCodeStagedChanges2.png)
+2. 폴더 생성
+```bash
+mkdir mysql
+```
 
-&nbsp;&nbsp;&nbsp;&nbsp;**3)** Pull 결과 확인
+3. 디렉터리 이동
+``` bash
+cd mysql
+```
+
+4. `Dockerfile` 생성
+``` dockerfile
+FROM mysql:9.5.0
+```
+
+5. `ghcr.io(GitHub Container Registry)` 로그인
+``` bash
+docker login ghcr. io
+# UserName : GitHub UserName 입력
+# Password : 토큰값 입력
+```
+
+6. Dockerfile 기반으로 이미지 생성
+``` bash
+# docker build -t ghcr.io/${NameSpace}/{이미지 이름}:{이미지 태그}
+docker build -t ghcr.io/parkjinwon1025/hello:mysql-9.5.0 .
+```
+7. 이미지 업로드
+```bash
+# docker push ghcr.io/${NameSpace}/{이미지 이름}:{이미지 태그}
+docker push ghcr.io/hello-git/hello:mysql-9.5.0
+```
+
+8. 이미지 실행
+```bash
+# docker run ghcr.io/${NameSpace}/{이미지 이름}:{이미지 태그}
+docker run -d ghcr.io/parkjinwon1025/hello:mysql-9.5.0
+```
+
+9. 이미지 가져오기
+```bash
+# docker pull ghcr.io/${NameSpace}/{이미지 이름}:{이미지 태그}
+docker pull ghcr.io/parkjinwon1025/hello:mysql-9.5.0
+```
+
+10. `ghcr.io(GitHub Container Registry)` 로그아웃
+```bash
+docker logout ghcr.io
+```
