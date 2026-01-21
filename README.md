@@ -233,7 +233,7 @@ docker build -t ghcr.io/parkjinwon1025/hello:mysql-9.5.0 .
 7. 이미지 업로드
 ```bash
 # docker push ghcr.io/${NameSpace}/{이미지 이름}:{이미지 태그}
-docker push ghcr.io/hello-git/hello:mysql-9.5.0
+docker push ghcr.io/parkjinwon1025/hello:mysql-9.5.0
 ```
 
 8. 이미지 실행
