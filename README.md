@@ -205,12 +205,12 @@ code .
 
 2. 폴더 생성
 ```bash
-mkdir mysql
+mkdir docker/mysql
 ```
 
 3. 디렉터리 이동
 ``` bash
-cd mysql
+cd docker/mysql
 ```
 
 4. `Dockerfile` 생성
@@ -227,23 +227,27 @@ docker login ghcr. io
 
 6. Dockerfile 기반으로 이미지 생성
 ``` bash
+# NameSpace : 자신의 Git 이름 (전부 소문자로 써야함.)
 # docker build -t ghcr.io/${NameSpace}/{이미지 이름}:{이미지 태그}
 docker build -t ghcr.io/parkjinwon1025/hello:mysql-9.5.0 .
 ```
 7. 이미지 업로드
 ```bash
+# NameSpace : 자신의 Git 이름 (전부 소문자로 써야함.)
 # docker push ghcr.io/${NameSpace}/{이미지 이름}:{이미지 태그}
 docker push ghcr.io/parkjinwon1025/hello:mysql-9.5.0
 ```
 
 8. 이미지 실행
 ```bash
+# NameSpace : 자신의 Git 이름 (전부 소문자로 써야함.)
 # docker run ghcr.io/${NameSpace}/{이미지 이름}:{이미지 태그}
 docker run -d ghcr.io/parkjinwon1025/hello:mysql-9.5.0
 ```
 
 9. 이미지 가져오기
 ```bash
+# NameSpace : 자신의 Git 이름 (전부 소문자로 써야함.)
 # docker pull ghcr.io/${NameSpace}/{이미지 이름}:{이미지 태그}
 docker pull ghcr.io/parkjinwon1025/hello:mysql-9.5.0
 ```
