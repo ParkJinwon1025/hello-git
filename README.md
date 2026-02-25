@@ -229,6 +229,7 @@ docker login ghcr. io
 ``` bash
 # NameSpace : 자신의 Git 이름 (전부 소문자로 써야함.)
 # docker build -t ghcr.io/<NameSpace>/<이미지 이름>:<이미지 태그>
+# 맨 뒤에 . 꼭 써야함.
 docker build -t ghcr.io/parkjinwon1025/hello:mysql-9.5.0 .
 ```
 7. 이미지 업로드
